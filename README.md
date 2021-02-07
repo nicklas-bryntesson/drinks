@@ -1,4 +1,4 @@
-<img align="right" width="240" src="http://nicklasbryntesson.se/assets/images/drink.svg" title="Longdrink" />
+<img align="right" width="140" src="http://nicklasbryntesson.se/assets/images/drink.svg" title="Longdrink" />
 
 # Drinks
 
