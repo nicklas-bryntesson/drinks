@@ -1,0 +1,12 @@
+/*
+
+!.gitignore
+!drinks.code-workspace
+
+!wp-content
+wp-content/*
+
+// THEME:
+!wp-content/themes
+wp-content/themes/*
+!wp-content/themes/drinks

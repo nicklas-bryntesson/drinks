@@ -1,0 +1,96 @@
+/*
+Theme Name: Drinks
+Theme URI: https://github.com/nicklas-bryntesson/pokemon
+Author: Nicklas Bryntesson
+Author URI: https://nicklasbryntesson.se/
+Description: Long drinks, Cocktails and shots with graphQL, ACF & Gatsby.
+Requires at least: 5.3
+Tested up to: 5.6
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: text_domian
+Tags: Drinks, Gatsby, Advanced Custom Fields, graphQL
+
+Drinks is distributed under the terms of the GNU GPL.
+*/
+
+:root {
+  --color-white: #fff;
+  --color-rich-black: hsl(196, 60%, 5%);
+  --color-alice-blue: hsl(197, 24%, 94%);
+  --color-baby-powder: hsl(100, 100%, 99%);
+  --color-slate-grey: hsl(214, 19%, 51%);
+  --color-tart-orange: hsl(0, 82%, 65%);
+  --color-carribean-green: hsl(156, 68%, 46%);
+}
+
+body {
+  background-color: var(--color-alice-blue);
+  color: var(--color-rich-black);
+}
+
+.index-page {
+  height: 100vh;
+  padding: 3rem;
+  background-color: bisque;
+}
+
+.poke-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em;
+  max-width: 80em;
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: 1em;
+}
+
+.wpQuery {
+  margin-top: 1em;
+  color: darkcyan;
+  text-align: center;
+}
+
+.site-footer,
+.site-header {
+  margin: 1em;
+  padding: 1.5em;
+  background-color: var(--color-slate-grey);
+  color: var(--color-white);
+  border-radius: 1em;
+}
+
+main {
+  max-width: 60em;
+  margin: 0 auto;
+  height: 80vh;
+}
+
+.content-header {
+  text-align: center;
+}
+
+.queryEmpty {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+.pokemonAvatar {
+  max-width: 100%;
+}
+
+.pokemonAvatar img {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+}
