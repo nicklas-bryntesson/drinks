@@ -2,11 +2,10 @@
 
 !.gitignore
 !drinks.code-workspace
+!README.md
 
 !wp-content
 wp-content/*
-
-// THEME:
 !wp-content/themes
 wp-content/themes/*
 !wp-content/themes/drinks
