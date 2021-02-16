@@ -25,6 +25,13 @@ if (!function_exists('drinks_setup')) {
 
 	function drinks_setup()
 	{
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on Twenty Twenty-One, use a find and replace
+		 * to change 'twentytwentyone' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain('text_domain', get_template_directory() . '/languages');
 
 		/**
 		 * Let WordPress manage the document title.
@@ -45,6 +52,12 @@ if (!function_exists('drinks_setup')) {
 				'status',
 			)
 		);
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support('post-thumbnails');
 
 		/**
 		 * Switch default core markup for search form, comment form, and comments
@@ -89,8 +102,15 @@ function drinks_scripts()
 }
 add_action('wp_enqueue_scripts', 'drinks_scripts');
 
-// Enhance the theme by hooking into WordPress.
-// require get_template_directory() . '/inc/drinks-class.php';
+// Drinks custom post type -> 'cpt_drinks'
+require get_template_directory() . '/inc/drinks-cpt.php';
+
+// Drinks custom post type -> 'cpt_drinks'
+require get_template_directory() . '/inc/liquor-cpt.php';
+
+
+// Custom taxonomy -> 'txn_flavour'
+require get_template_directory() . '/inc/flavour-taxonomy.php';
 
 // Enhance the theme by hooking into WordPress.
 require get_template_directory() . '/inc/template-functions.php';

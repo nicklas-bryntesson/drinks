@@ -1,11 +1,4 @@
 <?php
-/*
-Custom Post Type: Drinks
-*/
-?>
-
-<?php
-
 // Register Custom Post Type
 function drinks()
 {
@@ -13,7 +6,7 @@ function drinks()
 	$labels = array(
 		'name'                  => _x('Drinks', 'Post Type General Name', 'text_domain'),
 		'singular_name'         => _x('Drink', 'Post Type Singular Name', 'text_domain'),
-		'menu_name'             => __('Drinks', 'text_domain'),
+		'menu_name'             => __('Drink Recepies', 'text_domain'),
 		'name_admin_bar'        => __('Drinks', 'text_domain'),
 		'archives'              => __('Item Archives', 'text_domain'),
 		'attributes'            => __('Item Attributes', 'text_domain'),
@@ -44,7 +37,7 @@ function drinks()
 		'description'           => __('Cocktails, Long-drinks, shots...', 'text_domain'),
 		'labels'                => $labels,
 		'supports'              => array('title', 'editor', 'thumbnail', 'custom-fields'),
-		'taxonomies'            => array('Long drinks', ' Shots', ' Cocktails', ' Alcohol free'),
+		'taxonomies'            => array(),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -63,6 +56,3 @@ function drinks()
 	register_post_type('cpt_drinks', $args);
 }
 add_action('init', 'drinks', 0);
-
-
-?>

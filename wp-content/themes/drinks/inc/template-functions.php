@@ -1,9 +1,10 @@
 <?php
+
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
  * @package WordPress
- * @subpackage Pokemon
+ * @subpackage Drinks
  * @since 1.0.0
  */
 
@@ -16,7 +17,8 @@
  *
  * @return array
  */
-function pokemon_body_classes( $classes ) {
+function drinks_body_classes($classes)
+{
 
 	// Helps detect if JS is enabled or not.
 	$classes[] = 'no-js';
@@ -25,18 +27,18 @@ function pokemon_body_classes( $classes ) {
 	$classes[] = is_singular() ? 'singular' : 'hfeed';
 
 	// Add a body class if main navigation is active.
-	if ( has_nav_menu( 'primary' ) ) {
+	if (has_nav_menu('primary')) {
 		$classes[] = 'has-main-navigation';
 	}
 
 	// Add a body class if there are no footer widgets.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	if (!is_active_sidebar('sidebar-1')) {
 		$classes[] = 'no-widgets';
 	}
 
 	return $classes;
 }
-add_filter( 'body_class', 'pokemon_body_classes' );
+add_filter('body_class', 'drinks_body_classes');
 
 /**
  * Adds custom class to the array of posts classes.
@@ -47,9 +49,10 @@ add_filter( 'body_class', 'pokemon_body_classes' );
  *
  * @return array
  */
-function pokemon_post_classes( $classes ) {
+function drinks_post_classes($classes)
+{
 	$classes[] = 'entry';
 
 	return $classes;
 }
-add_filter( 'post_class', 'pokemon_post_classes', 10, 3 );
+add_filter('post_class', 'drinks_post_classes', 10, 3);
